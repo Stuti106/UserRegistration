@@ -1,0 +1,93 @@
+.registration {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+.registration-header,
+.registration p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.registration-header {
+  background: rgb(49, 95, 40);
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.registration-container {
+  background: #ebebeb;
+  padding: 12px;
+}
+
+.registration p {
+  padding: 12px;
+}
+
+.registration input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.registration input[type="email"],
+.registration select {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+option {
+  font-size: 18px;
+  background-color: #ffffff;
+}
+
+option:before {
+  content: ">";
+  font-size: 20px;
+  display: none;
+  padding-right: 10px;
+  padding-left: 5px;
+  color: #fff;
+}
+
+option:hover:before {
+  display: inline;
+}
+
+.registration input[type="email"]:focus,
+.registration input[type="password"]:focus {
+  border-color: #888;
+}
+
+.registration input[type="submit"] {
+  background: rgb(1, 51, 34);
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.registration button {
+  background: #315f28;
+    height: 3em;
+    width: 16em;
+    font-size: 1.4em;
+   font-weight: normal;
+   text-align: center;
+   text-transform: uppercase;
+   color: #fff;
+}
+.has-error input[type="text"],
+.has-error input[type="number"] {
+    border-color: rgb(216, 12, 12);
+    color: rgb(230, 14, 14);
+}

@@ -1,0 +1,48 @@
+<br>
+<br>
+<div class="registration">
+    <h2 class="registration-header"> Registration Form</h2>
+    <form [formGroup]="registrationForm" class="registration-container" (ngSubmit)="submit()">
+        <p [ngClass]="{'has-error':!registrationForm.controls['firstName'].valid}">
+            <input type="text" placeholder="First Name" formControlName="firstName">
+        </p>
+        <div class="alert alert-danger" *ngIf="registrationForm.controls['firstName'].hasError('minlength')">
+            First Name must be at least 5 characters long.
+        </div>
+        <div class="alert alert-danger"
+            *ngIf="registrationForm.controls['firstName'].hasError('required') &&registrationForm.controls['firstName'].dirty">
+            First Name is required
+        </div>
+        <p [ngClass]="{'has-error':!registrationForm.controls['lastName'].valid}">
+            <input type="text" placeholder="Last Name" formControlName="lastName">
+        </p>
+        <div class="alert alert-danger" *ngIf="registrationForm.controls['lastName'].hasError('minlength')">
+            Last Name must be at least 5 characters long.
+        </div>
+        <div class="alert alert-danger"
+            *ngIf="registrationForm.controls['lastName'].hasError('required') &&registrationForm.controls['lastName'].dirty">
+            Last Name is required
+        </div>
+        <p [ngClass]="{'has-error':!registrationForm.controls['phoneNumber'].valid}">
+            <input type="number" placeholder="Phone Number" formControlName="phoneNumber">
+        </p>
+        <div class="alert alert-danger"
+            *ngIf="registrationForm.controls['phoneNumber'].hasError('required') &&registrationForm.controls['phoneNumber'].dirty">
+            Phone Number is required
+        </div>
+        <p>
+            <select id="country" name="country" formControlName="country">
+                <option [ngValue]="c.code" *ngFor="let c of countryDataList">
+                    {{c.name}}
+                </option>
+            </select>
+        </p>
+        <p>
+            <button type="submit" class="btn btn-primary" [disabled]="!registrationForm.valid">
+                REGISTER HERE
+            </button>
+        </p>
+    </form>
+</div>
+<br>
+<br>

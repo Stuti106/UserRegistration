@@ -1,0 +1,23 @@
+.navbar1 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background: #a9aca9;
+    height: 3em;
+    width: 16em;
+    font-size: 1.4em;
+   font-weight: normal;
+   text-align: center;
+   text-transform: uppercase;
+   color: #fff;
+
+}
+.btn-success {
+    color: black !important; 
+    background-color: white !important;
+   border-color: blue !important;
+}
